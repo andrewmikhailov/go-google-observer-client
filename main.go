@@ -13,10 +13,12 @@ type Event struct {
 	Uri  string `json:"uri"`
 }
 
-func main() {
+type DataSource struct {
+	Uri string
+}
 
-	url := "http://google-observer-1.herokuapp.com/api/event/list?kernelIdentifier=593a842d7c52901100c8815c"
-	response, error := http.Get(url)
+func (this DataSource) Load() [] Event {
+	response, error := http.Get(this.Uri)
 	if error != nil {
 		panic(error.Error())
 	}
@@ -28,9 +30,19 @@ func main() {
 
 	var items [] Event
 	json.Unmarshal(body, &items)
+	return items;
+}
 
+func NewDataSource(uri string) DataSource {
+	dataSource := DataSource{}
+	dataSource.Uri = uri
+	return dataSource
+}
+
+func main() {
+	uri := "http://google-observer-1.herokuapp.com/api/event/list?kernelIdentifier=593a842d7c52901100c8815c"
+	items := NewDataSource(uri).Load()
 	for i := 1; i < len(items); i++ {
-
 		var item = items[i]
 		fmt.Printf("News event parsed: %s %s %s\n", item.Hash, item.Uri, item.Text)
 	}
