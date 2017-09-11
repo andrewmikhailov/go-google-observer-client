@@ -34,9 +34,7 @@ func (this DataSource) Load() [] Event {
 }
 
 func NewDataSource(uri string) DataSource {
-	dataSource := DataSource{}
-	dataSource.Uri = uri
-	return dataSource
+	return DataSource{Uri: uri}
 }
 
 func main() {
