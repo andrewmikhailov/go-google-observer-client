@@ -18,3 +18,8 @@ func main() {
 	}
 }
 ```
+
+## To run tests
+```
+go test
+```
