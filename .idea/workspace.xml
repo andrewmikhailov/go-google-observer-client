@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="845dc606-1e93-4f9f-82b2-8c077e6e7d93" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vitche.com/google-observer-client/models.go" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/GOPATH__go_google_observer_client_.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/go-google-observer-client.iml" afterPath="$PROJECT_DIR$/.idea/go-google-observer-client.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.go" afterPath="$PROJECT_DIR$/main.go" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -55,6 +50,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Vitche Research Team &lt;developer@vitche.com&gt;" />
         <option value="Andrew Mikhailov &lt;andrew@vitche.com&gt;" />
       </list>
     </option>
@@ -321,7 +317,7 @@
       <workItem from="1505138593194" duration="262000" />
       <workItem from="1505138872354" duration="1286000" />
       <workItem from="1505228756374" duration="1666000" />
-      <workItem from="1505230573666" duration="555000" />
+      <workItem from="1505230573666" duration="611000" />
     </task>
     <task id="LOCAL-00001" summary="1. Initial check-in.">
       <created>1504876000773</created>
@@ -351,11 +347,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505138318444</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1. Structured the project as a component.">
+      <created>1505231174057</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1505231174057</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8849000" />
+    <option name="totallyTimeSpent" value="8905000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -389,7 +392,8 @@
     <MESSAGE value="1. &quot;Hello, World&quot; application." />
     <MESSAGE value="1. Implemented loading data from the news JSON API." />
     <MESSAGE value="1. A data-source class.&#10;2. A data-source factory." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. A data-source class.&#10;2. A data-source factory." />
+    <MESSAGE value="1. Structured the project as a component." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Structured the project as a component." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
