@@ -3,7 +3,7 @@
   <component name="GoLibraries">
     <option name="urls">
       <list>
-        <option value="file://C:/Go" />
+        <option value="file://$MODULE_DIR$" />
       </list>
     </option>
   </component>
@@ -15,6 +15,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="GOPATH &lt;go-google-observer-client&gt;" level="project" />
   </component>
 </module>
