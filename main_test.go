@@ -50,30 +50,19 @@ func getItems(kernelIdentifier string) {
 }
 
 func runItems() {
-	testWG := sync.WaitGroup{}
-	testWG.Add(2)
 	fmt.Println("Start process kernels: ", kernelIdentifiersLength)
 	wg.Add(kernelIdentifiersLength)
 
-	go func() {
-		for index := 0; index < kernelIdentifiersLength; index++ {
-			fmt.Println("Start process kernel: ", index)
-			getItems(kernelIdentifiers[index])
+	for index := 0; index < kernelIdentifiersLength; index++ {
+		fmt.Println("Start process kernel: ", index)
+		getItems(kernelIdentifiers[index])
+	}
+	for index := 0; index < kernelIdentifiersLength; index++ {
+		select {
+		case eventfeed := <-feeds:
+			items = append(items, eventfeed.value...)
 		}
-		testWG.Done()
-	}()
-
-	go func() {
-		for index := 0; index < kernelIdentifiersLength; index++ {
-			select {
-			case eventfeed := <-feeds:
-				items = append(items, eventfeed.value...)
-			}
-		}
-		testWG.Done()
-	}()
-
-	testWG.Wait()
+	}
 }
 
 func TestRun(t *testing.T) {
