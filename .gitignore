@@ -1,1 +1,5 @@
 /.svn/
+.DS_Store
+*.test
+.idea
+.vscode

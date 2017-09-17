@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+
 	"vitche.com/google-observer-client"
 )
 
@@ -40,7 +41,7 @@ func main() {
 	feeds := make(chan EventFeed)
 
 	for i := 0; i < len(kernelIdentifiers); i++ {
-		var kernelIdentifier = kernelIdentifiers[i];
+		var kernelIdentifier = kernelIdentifiers[i]
 		go func() {
 			uri := "http://google-observer-1.herokuapp.com/api/event/list?kernelIdentifier=" + kernelIdentifier
 			items := google_observer_client.NewDataSource(uri).Load()
