@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"sync"
 	"testing"
-	// Your path can be different
-	"go-google-observer-client/src/vitche.com/google-observer-client"
+
+	"vitche.com/google-observer-client"
 )
 
 var (
