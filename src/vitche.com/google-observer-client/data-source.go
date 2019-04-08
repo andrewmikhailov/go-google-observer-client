@@ -1,29 +1,29 @@
 package google_observer_client
 
 import (
-	"net/http"
-	"io/ioutil"
 	"encoding/json"
+	"io/ioutil"
+	"net/http"
 )
 
 type DataSource struct {
 	Uri string
 }
 
-func (this DataSource) Load() [] Event {
+func (this DataSource) Load() ([]Event, error) {
 	response, error := http.Get(this.Uri)
 	if error != nil {
-		panic(error.Error())
+		return nil, error
 	}
 
 	body, error := ioutil.ReadAll(response.Body)
 	if error != nil {
-		panic(error.Error())
+		return nil, error
 	}
 
-	var items [] Event
+	var items []Event
 	json.Unmarshal(body, &items)
-	return items;
+	return items, nil
 }
 
 func NewDataSource(uri string) DataSource {
