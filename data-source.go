@@ -1,4 +1,4 @@
-package google_observer_client
+package go_google_observer_client
 
 import (
 	"encoding/json"
